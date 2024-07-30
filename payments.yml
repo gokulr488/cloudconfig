@@ -7,7 +7,7 @@ spring:
     pathmatch:
       matching-strategy: ant-path-matcher
   application:
-    name: payments
+    name: PAYMENTS
 logging:
   level:
     com.gokulr488.spring.payments: DEBUG
