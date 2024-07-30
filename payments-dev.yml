@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://pi5.local:5432/optionsgenie_dev
+    username: gokul
+    password: unnir7488*
+og:
+  workspace: workspace

@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://PostgreSQL:5432/optionsgenie
+    username: gokul
+    password: unnir7488*
+logging:
+  level:
+    com.gokulr488.optionsgenie: INFO
+og:
+  workspace: optionsgenie
+  dataCollector:
+    candle:
+      cron: 0 0 16 * * *
+      instruments: NSE_INDEX|Nifty 50,NSE_INDEX|Nifty Bank,NSE_INDEX|Nifty Fin Service,NSE_INDEX|NIFTY MID SELECT
+    optionChain:
+      contractUpdateCron: 0 0 9 * * MON-FRI
+      chainUpdateCron: "*/8 * * * * MON-FRI"
+      instruments: NSE_INDEX|Nifty 50,NSE_INDEX|Nifty Bank,NSE_INDEX|Nifty Fin Service,NSE_INDEX|NIFTY MID SELECT

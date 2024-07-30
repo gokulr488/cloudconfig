@@ -1,0 +1,36 @@
+server:
+  port: 8903
+  ssl:
+    enabled: true
+    key-store-type: PKCS12
+    key-store: classpath:keystore/optionsgenie.p12
+    key-store-password: Unnir7488*
+    key-alias: gokulr488
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+  application:
+    name: optionsgenie
+  data:
+    jpa:
+      repositories:
+        enabled: true
+  datasource:
+    url: jdbc:postgresql://pi5.local:5432/optionsgenie_dev
+    username: gokul
+    password: unnir7488*
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 500
+    show-sql: true
+logging:
+  level:
+    com.gokulr488.optionsgenie: DEBUG
+    org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
+  pattern:
+    console: '%d{HH:mm:ss.SSS} %-5level- %msg%n'
